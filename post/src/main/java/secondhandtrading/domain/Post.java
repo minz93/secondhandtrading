@@ -129,6 +129,34 @@ public class Post {
 
     //>>> Clean Arch / Port Method
     //<<< Clean Arch / Port Method
+    public static void updateStatus(PostHided postHided) {
+        //implement business logic here:
+
+        /** Example 1:  new item 
+        Post post = new Post();
+        repository().save(post);
+
+        StatusUpdated statusUpdated = new StatusUpdated(post);
+        statusUpdated.publishAfterCommit();
+        */
+
+        /** Example 2:  finding and process
+        
+        repository().findById(postHided.get???()).ifPresent(post->{
+            
+            post // do something
+            repository().save(post);
+
+            StatusUpdated statusUpdated = new StatusUpdated(post);
+            statusUpdated.publishAfterCommit();
+
+         });
+        */
+
+    }
+
+    //>>> Clean Arch / Port Method
+    //<<< Clean Arch / Port Method
     public static void updateLikecnt(WishlistAdded wishlistAdded) {
         //implement business logic here:
 
