@@ -40,7 +40,7 @@ mvn spring-boot:run
 ```
 - product
 ```
- http :8088/products posttId="posttId" userId="userId" status="status" price="price" likeCnt="likeCnt" createDt="createDt" updateDt="updateDt" photos="photos" address="address" 
+ http :8088/products posttId="posttId" userId="userId" status="status" price="price" likeCnt="likeCnt" createDt="createDt" updateDt="updateDt" photos="photos" address="address" traderId="traderId" 
 ```
 - trading
 ```

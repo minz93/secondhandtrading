@@ -75,6 +75,7 @@
                     { text: "updateDt", value: "updateDt" },
                     { text: "photos", value: "photos" },
                     { text: "address", value: "address" },
+                    { text: "traderId", value: "traderId" },
                 ],
             product : [],
             newValue: {},
@@ -101,6 +102,7 @@
                 'updateDt': '2024-09-23',
                 'photos': [],
                 'address': '',
+                'traderId': 0,
             }
         },
         methods: {

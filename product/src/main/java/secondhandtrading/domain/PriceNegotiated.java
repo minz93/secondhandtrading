@@ -14,7 +14,7 @@ public class PriceNegotiated extends AbstractEvent {
     private Long posttId;
     private String userId;
     private Integer price;
-    private String sellerUserId;
+    private Long traderId;
     private Integer negoPrice;
 
     public PriceNegotiated(Product aggregate) {

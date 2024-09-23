@@ -12,5 +12,5 @@ public class MessagesSent extends AbstractEvent {
     private Long chatId;
     private Long postId;
     private String userId;
-    private String sellerUserId;
+    private Long traderId;
 }

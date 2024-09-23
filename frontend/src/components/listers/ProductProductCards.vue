@@ -118,6 +118,7 @@
                 'updateDt': '2024-09-23',
                 'photos': [],
                 'address': '',
+                'traderId': 0,
             }
         },
         methods:{

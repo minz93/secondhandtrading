@@ -26,6 +26,7 @@
             <List&lt;Photos&gt; offline label="Photos" v-model="value.photos" :editMode="editMode" @change="change"/>
             <PhotosManager offline label="Photos" v-model="value.photos" :editMode="editMode" @change="change"/>
             <String label="Address" v-model="value.address" :editMode="editMode" :inputUI="''"/>
+            <Number label="TraderId" v-model="value.traderId" :editMode="editMode" :inputUI="''"/>
         </v-card-text>
 
         <v-card-actions>
@@ -66,6 +67,13 @@
                     @click="save"
                 >
                     DeleteWishlist
+                </v-btn>
+                <v-btn
+                    color="primary"
+                    text
+                    @click="save"
+                >
+                    SendAcceptMessages
                 </v-btn>
                 <v-btn
                     color="primary"
