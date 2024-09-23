@@ -48,25 +48,25 @@
 
                     <v-list-item
                         class="px-2"
-                        key="products"
-                        to="/products/products"
+                        key="purchases"
+                        to="/purchases/purchases"
                         @click="changeUrl()"
                         color="primary"
                         style="font-weight:700;"
                     >
-                        Product
+                        Purchase
                     </v-list-item>
 
 
                     <v-list-item
                         class="px-2"
-                        key="tradings"
-                        to="/tradings/tradings"
+                        key="trades"
+                        to="/trades/trades"
                         @click="changeUrl()"
                         color="primary"
                         style="font-weight:700;"
                     >
-                        Trading
+                        Trade
                     </v-list-item>
 
 
@@ -169,17 +169,17 @@ export default {
                 ImageUrl: '',
             },
             { 
-                title: 'Product', 
+                title: 'Purchase', 
                 description: '', 
-                key: 'products', 
-                route: '/products/products',
+                key: 'purchases', 
+                route: '/purchases/purchases',
                 ImageUrl: '',
             },
             { 
-                title: 'Trading', 
+                title: 'Trade', 
                 description: '', 
-                key: 'tradings', 
-                route: '/tradings/tradings',
+                key: 'trades', 
+                route: '/trades/trades',
                 ImageUrl: '',
             },
             { 

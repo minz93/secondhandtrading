@@ -22,7 +22,7 @@ public class Alarm {
 
     private Long userId;
 
-    private Long sellerUserId;
+    private Long traderId;
 
     private Long postId;
 

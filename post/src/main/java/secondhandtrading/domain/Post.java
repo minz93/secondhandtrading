@@ -34,8 +34,8 @@ public class Post {
 
     private String address;
 
-    @Embedded
-    private Photo photos;
+    @ElementCollection
+    private List<String> photos;
 
     private Date updateDt;
 

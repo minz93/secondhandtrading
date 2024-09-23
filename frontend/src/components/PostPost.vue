@@ -23,7 +23,7 @@
             <Number label="Price" v-model="value.price" :editMode="editMode" :inputUI="''"/>
             <Number label="LikeCnt" v-model="value.likeCnt" :editMode="editMode" :inputUI="''"/>
             <String label="Address" v-model="value.address" :editMode="editMode" :inputUI="''"/>
-            <Photo offline label="Photos" v-model="value.photos" :editMode="editMode" @change="change"/>
+            <String label="Photos" v-model="value.photos" :editMode="editMode" :inputUI="''"/>
             <Date label="UpdateDt" v-model="value.updateDt" :editMode="editMode" :inputUI="''"/>
         </v-card-text>
 
@@ -106,12 +106,10 @@
 <script>
     const axios = require('axios').default;
 
-    import Photo from './vo/Photo.vue';
 
     export default {
         name: 'PostPost',
         components:{
-            Photo,
         },
         props: {
             value: [Object, String, Number, Boolean, Array],

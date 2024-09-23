@@ -18,7 +18,7 @@ public class PostEdited extends AbstractEvent {
     private Integer price;
     private Integer likeCnt;
     private String address;
-    private Photo photos;
+    private String photos;
     private Date updateDt;
 
     public PostEdited(Post aggregate) {

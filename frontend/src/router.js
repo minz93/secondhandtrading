@@ -8,11 +8,11 @@ Vue.use(Router);
 import PostPostManager from "./components/listers/PostPostCards"
 import PostPostDetail from "./components/listers/PostPostDetail"
 
-import ProductProductManager from "./components/listers/ProductProductCards"
-import ProductProductDetail from "./components/listers/ProductProductDetail"
+import PurchasePurchaseManager from "./components/listers/PurchasePurchaseCards"
+import PurchasePurchaseDetail from "./components/listers/PurchasePurchaseDetail"
 
-import TradingTradingManager from "./components/listers/TradingTradingCards"
-import TradingTradingDetail from "./components/listers/TradingTradingDetail"
+import TradeTradeManager from "./components/listers/TradeTradeCards"
+import TradeTradeDetail from "./components/listers/TradeTradeDetail"
 
 import AlarmAlarmManager from "./components/listers/AlarmAlarmCards"
 import AlarmAlarmDetail from "./components/listers/AlarmAlarmDetail"
@@ -35,25 +35,25 @@ export default new Router({
             },
 
             {
-                path: '/products/products',
-                name: 'ProductProductManager',
-                component: ProductProductManager
+                path: '/purchases/purchases',
+                name: 'PurchasePurchaseManager',
+                component: PurchasePurchaseManager
             },
             {
-                path: '/products/products/:id',
-                name: 'ProductProductDetail',
-                component: ProductProductDetail
+                path: '/purchases/purchases/:id',
+                name: 'PurchasePurchaseDetail',
+                component: PurchasePurchaseDetail
             },
 
             {
-                path: '/tradings/tradings',
-                name: 'TradingTradingManager',
-                component: TradingTradingManager
+                path: '/trades/trades',
+                name: 'TradeTradeManager',
+                component: TradeTradeManager
             },
             {
-                path: '/tradings/tradings/:id',
-                name: 'TradingTradingDetail',
-                component: TradingTradingDetail
+                path: '/trades/trades/:id',
+                name: 'TradeTradeDetail',
+                component: TradeTradeDetail
             },
 
             {

@@ -26,7 +26,7 @@
             <div>
                 <String label="Address" v-model="item.address" :editMode="editMode" @change="change" />
             </div>
-            <Photo offline label="Photos" v-model="item.photos" :editMode="false" @change="change" />
+            <StringManager offline label="Photos" v-model="item.photos" :editMode="false" @change="change" />
             <div>
                 <Date label="UpdateDt" v-model="item.updateDt" :editMode="editMode" @change="change" />
             </div>

@@ -13,14 +13,14 @@ spring:
           uri: http://localhost:8082
           predicates:
             - Path=/posts/**, 
-        - id: product
+        - id: purchase
           uri: http://localhost:8083
           predicates:
-            - Path=/products/**, 
-        - id: trading
+            - Path=/purchases/**, 
+        - id: trade
           uri: http://localhost:8084
           predicates:
-            - Path=/tradings/**, 
+            - Path=/trades/**, 
         - id: alarm
           uri: http://localhost:8085
           predicates:
@@ -57,14 +57,14 @@ spring:
           uri: http://post:8080
           predicates:
             - Path=/posts/**, 
-        - id: product
-          uri: http://product:8080
+        - id: purchase
+          uri: http://purchase:8080
           predicates:
-            - Path=/products/**, 
-        - id: trading
-          uri: http://trading:8080
+            - Path=/purchases/**, 
+        - id: trade
+          uri: http://trade:8080
           predicates:
-            - Path=/tradings/**, 
+            - Path=/trades/**, 
         - id: alarm
           uri: http://alarm:8080
           predicates:

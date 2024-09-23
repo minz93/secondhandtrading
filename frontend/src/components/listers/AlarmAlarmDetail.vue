@@ -12,7 +12,7 @@
                 <Number label="UserId" v-model="item.userId" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <Number label="SellerUserId" v-model="item.sellerUserId" :editMode="editMode" @change="change" />
+                <Number label="TraderId" v-model="item.traderId" :editMode="editMode" @change="change" />
             </div>
             <div>
                 <Number label="PostId" v-model="item.postId" :editMode="editMode" @change="change" />

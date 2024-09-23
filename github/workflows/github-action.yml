@@ -30,8 +30,8 @@ jobs:
       - name: Build Maven Projects
         run: |
           mvn clean package -f ./post/pom.xml
-          mvn clean package -f ./product/pom.xml
-          mvn clean package -f ./trading/pom.xml
+          mvn clean package -f ./purchase/pom.xml
+          mvn clean package -f ./trade/pom.xml
           mvn clean package -f ./alarm/pom.xml
           mvn clean package -f ./mypage/pom.xml
 
@@ -45,25 +45,25 @@ jobs:
             ghcr.io/${{ github.repository }}/post:latest
             ghcr.io/${{ github.repository }}/post:${{ github.ref_name }}
             
-      - name: Docker Build and push for Product
+      - name: Docker Build and push for Purchase
         uses: docker/build-push-action@v4
         with:
-          context: ./product
+          context: ./purchase
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ghcr.io/${{ github.repository }}/product:latest
-            ghcr.io/${{ github.repository }}/product:${{ github.ref_name }}
+            ghcr.io/${{ github.repository }}/purchase:latest
+            ghcr.io/${{ github.repository }}/purchase:${{ github.ref_name }}
             
-      - name: Docker Build and push for Trading
+      - name: Docker Build and push for Trade
         uses: docker/build-push-action@v4
         with:
-          context: ./trading
+          context: ./trade
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ghcr.io/${{ github.repository }}/trading:latest
-            ghcr.io/${{ github.repository }}/trading:${{ github.ref_name }}
+            ghcr.io/${{ github.repository }}/trade:latest
+            ghcr.io/${{ github.repository }}/trade:${{ github.ref_name }}
             
       - name: Docker Build and push for Alarm
         uses: docker/build-push-action@v4
