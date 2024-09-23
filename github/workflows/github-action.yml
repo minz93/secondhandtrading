@@ -32,7 +32,6 @@ jobs:
           mvn clean package -f ./post/pom.xml
           mvn clean package -f ./purchase/pom.xml
           mvn clean package -f ./trade/pom.xml
-          mvn clean package -f ./alarm/pom.xml
           mvn clean package -f ./mypage/pom.xml
 
       - name: Docker Build and push for Post
@@ -64,16 +63,6 @@ jobs:
           tags: |
             ghcr.io/${{ github.repository }}/trade:latest
             ghcr.io/${{ github.repository }}/trade:${{ github.ref_name }}
-            
-      - name: Docker Build and push for Alarm
-        uses: docker/build-push-action@v4
-        with:
-          context: ./alarm
-          platforms: linux/amd64,linux/arm64
-          push: true
-          tags: |
-            ghcr.io/${{ github.repository }}/alarm:latest
-            ghcr.io/${{ github.repository }}/alarm:${{ github.ref_name }}
             
       - name: Docker Build and push for Mypage
         uses: docker/build-push-action@v4

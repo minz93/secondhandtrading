@@ -6,6 +6,7 @@ import java.util.List;
 import javax.persistence.*;
 import lombok.Data;
 import secondhandtrading.PostApplication;
+import secondhandtrading.domain.LikeCntUpdated;
 import secondhandtrading.domain.PostDeleted;
 import secondhandtrading.domain.PostEdited;
 import secondhandtrading.domain.PostHided;
@@ -52,6 +53,9 @@ public class Post {
 
         PostHided postHided = new PostHided(this);
         postHided.publishAfterCommit();
+
+        LikeCntUpdated likeCntUpdated = new LikeCntUpdated(this);
+        likeCntUpdated.publishAfterCommit();
     }
 
     @PostUpdate
@@ -172,6 +176,62 @@ public class Post {
 
             StatusUpdated statusUpdated = new StatusUpdated(post);
             statusUpdated.publishAfterCommit();
+
+         });
+        */
+
+    }
+
+    //>>> Clean Arch / Port Method
+    //<<< Clean Arch / Port Method
+    public static void updateLikecnt(WishlistAdded wishlistAdded) {
+        //implement business logic here:
+
+        /** Example 1:  new item 
+        Post post = new Post();
+        repository().save(post);
+
+        LikeCntUpdated likeCntUpdated = new LikeCntUpdated(post);
+        likeCntUpdated.publishAfterCommit();
+        */
+
+        /** Example 2:  finding and process
+        
+        repository().findById(wishlistAdded.get???()).ifPresent(post->{
+            
+            post // do something
+            repository().save(post);
+
+            LikeCntUpdated likeCntUpdated = new LikeCntUpdated(post);
+            likeCntUpdated.publishAfterCommit();
+
+         });
+        */
+
+    }
+
+    //>>> Clean Arch / Port Method
+    //<<< Clean Arch / Port Method
+    public static void updateLikecnt(WishlistDeleted wishlistDeleted) {
+        //implement business logic here:
+
+        /** Example 1:  new item 
+        Post post = new Post();
+        repository().save(post);
+
+        LikeCntUpdated likeCntUpdated = new LikeCntUpdated(post);
+        likeCntUpdated.publishAfterCommit();
+        */
+
+        /** Example 2:  finding and process
+        
+        repository().findById(wishlistDeleted.get???()).ifPresent(post->{
+            
+            post // do something
+            repository().save(post);
+
+            LikeCntUpdated likeCntUpdated = new LikeCntUpdated(post);
+            likeCntUpdated.publishAfterCommit();
 
          });
         */

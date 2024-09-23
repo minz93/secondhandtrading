@@ -70,5 +70,37 @@ public class PolicyHandler {
         // Sample Logic //
         Post.updateStatus(event);
     }
+
+    @StreamListener(
+        value = KafkaProcessor.INPUT,
+        condition = "headers['type']=='WishlistAdded'"
+    )
+    public void wheneverWishlistAdded_UpdateLikecnt(
+        @Payload WishlistAdded wishlistAdded
+    ) {
+        WishlistAdded event = wishlistAdded;
+        System.out.println(
+            "\n\n##### listener UpdateLikecnt : " + wishlistAdded + "\n\n"
+        );
+
+        // Sample Logic //
+        Post.updateLikecnt(event);
+    }
+
+    @StreamListener(
+        value = KafkaProcessor.INPUT,
+        condition = "headers['type']=='WishlistDeleted'"
+    )
+    public void wheneverWishlistDeleted_UpdateLikecnt(
+        @Payload WishlistDeleted wishlistDeleted
+    ) {
+        WishlistDeleted event = wishlistDeleted;
+        System.out.println(
+            "\n\n##### listener UpdateLikecnt : " + wishlistDeleted + "\n\n"
+        );
+
+        // Sample Logic //
+        Post.updateLikecnt(event);
+    }
 }
 //>>> Clean Arch / Inbound Adaptor

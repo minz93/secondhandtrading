@@ -1,12 +1,10 @@
 package secondhandtrading.domain;
 
-import java.time.LocalDate;
 import java.util.*;
 import lombok.*;
 import secondhandtrading.domain.*;
 import secondhandtrading.infra.AbstractEvent;
 
-//<<< DDD / Domain Event
 @Data
 @ToString
 public class WishlistDeleted extends AbstractEvent {
@@ -17,13 +15,4 @@ public class WishlistDeleted extends AbstractEvent {
     private Integer price;
     private Integer likeCnt;
     private Long traderId;
-
-    public WishlistDeleted(Product aggregate) {
-        super(aggregate);
-    }
-
-    public WishlistDeleted() {
-        super();
-    }
 }
-//>>> DDD / Domain Event

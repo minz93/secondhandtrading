@@ -21,12 +21,8 @@ spring:
           uri: http://localhost:8084
           predicates:
             - Path=/trades/**, 
-        - id: alarm
-          uri: http://localhost:8085
-          predicates:
-            - Path=/alarms/**, 
         - id: mypage
-          uri: http://localhost:8086
+          uri: http://localhost:8085
           predicates:
             - Path=, 
         - id: frontend
@@ -65,10 +61,6 @@ spring:
           uri: http://trade:8080
           predicates:
             - Path=/trades/**, 
-        - id: alarm
-          uri: http://alarm:8080
-          predicates:
-            - Path=/alarms/**, 
         - id: mypage
           uri: http://mypage:8080
           predicates:

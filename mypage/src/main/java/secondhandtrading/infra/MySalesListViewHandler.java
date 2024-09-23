@@ -27,9 +27,9 @@ public class MySalesListViewHandler {
             // view 객체에 이벤트의 Value 를 set 함
             mySalesList.setPostId(postWrote.getPostId());
             mySalesList.setUserId(Long.valueOf(postWrote.getUserId()));
-            mySalesList.setStatus(postWrote.getStatus());
             mySalesList.setCreateDt(postWrote.getCreateDt());
             mySalesList.setPrice(postWrote.getPrice());
+            mySalesList.setStatus(postWrote.getStatus());
             // view 레파지 토리에 save
             mySalesListRepository.save(mySalesList);
         } catch (Exception e) {

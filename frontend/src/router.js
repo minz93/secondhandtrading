@@ -14,9 +14,6 @@ import PurchasePurchaseDetail from "./components/listers/PurchasePurchaseDetail"
 import TradeTradeManager from "./components/listers/TradeTradeCards"
 import TradeTradeDetail from "./components/listers/TradeTradeDetail"
 
-import AlarmAlarmManager from "./components/listers/AlarmAlarmCards"
-import AlarmAlarmDetail from "./components/listers/AlarmAlarmDetail"
-
 
 
 export default new Router({
@@ -54,17 +51,6 @@ export default new Router({
                 path: '/trades/trades/:id',
                 name: 'TradeTradeDetail',
                 component: TradeTradeDetail
-            },
-
-            {
-                path: '/alarms/alarms',
-                name: 'AlarmAlarmManager',
-                component: AlarmAlarmManager
-            },
-            {
-                path: '/alarms/alarms/:id',
-                name: 'AlarmAlarmDetail',
-                component: AlarmAlarmDetail
             },
 
 

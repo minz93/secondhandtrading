@@ -49,85 +49,33 @@ public class Alarm {
 
     //<<< Clean Arch / Port Method
     public static void alarmChat(MessagesSent messagesSent) {
-        //implement business logic here:
-
-        /** Example 1:  new item 
         Alarm alarm = new Alarm();
         repository().save(alarm);
 
         ChatAlarmed chatAlarmed = new ChatAlarmed(alarm);
-        chatAlarmed.publishAfterCommit();
-        */
-
-        /** Example 2:  finding and process
-        
-        repository().findById(messagesSent.get???()).ifPresent(alarm->{
-            
-            alarm // do something
-            repository().save(alarm);
-
-            ChatAlarmed chatAlarmed = new ChatAlarmed(alarm);
-            chatAlarmed.publishAfterCommit();
-
-         });
-        */
+        ChatAlarmed.publishAfterCommit();
 
     }
 
     //>>> Clean Arch / Port Method
     //<<< Clean Arch / Port Method
     public static void alarmPriceChanged(PostEdited postEdited) {
-        //implement business logic here:
-
-        /** Example 1:  new item 
         Alarm alarm = new Alarm();
         repository().save(alarm);
 
         PriceChangedAlarmed priceChangedAlarmed = new PriceChangedAlarmed(alarm);
         priceChangedAlarmed.publishAfterCommit();
-        */
-
-        /** Example 2:  finding and process
-        
-        repository().findById(postEdited.get???()).ifPresent(alarm->{
-            
-            alarm // do something
-            repository().save(alarm);
-
-            PriceChangedAlarmed priceChangedAlarmed = new PriceChangedAlarmed(alarm);
-            priceChangedAlarmed.publishAfterCommit();
-
-         });
-        */
-
+ 
     }
 
     //>>> Clean Arch / Port Method
     //<<< Clean Arch / Port Method
     public static void alarmPriceNegotiation(PriceNegotiated priceNegotiated) {
-        //implement business logic here:
-
-        /** Example 1:  new item 
         Alarm alarm = new Alarm();
         repository().save(alarm);
 
         PriceNegotiationAlarmed priceNegotiationAlarmed = new PriceNegotiationAlarmed(alarm);
         priceNegotiationAlarmed.publishAfterCommit();
-        */
-
-        /** Example 2:  finding and process
-        
-        repository().findById(priceNegotiated.get???()).ifPresent(alarm->{
-            
-            alarm // do something
-            repository().save(alarm);
-
-            PriceNegotiationAlarmed priceNegotiationAlarmed = new PriceNegotiationAlarmed(alarm);
-            priceNegotiationAlarmed.publishAfterCommit();
-
-         });
-        */
-
     }
     //>>> Clean Arch / Port Method
 
