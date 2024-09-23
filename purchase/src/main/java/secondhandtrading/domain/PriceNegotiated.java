@@ -11,7 +11,7 @@ import secondhandtrading.infra.AbstractEvent;
 @ToString
 public class PriceNegotiated extends AbstractEvent {
 
-    private Long posttId;
+    private Long postId;
     private String userId;
     private Integer price;
     private Long traderId;

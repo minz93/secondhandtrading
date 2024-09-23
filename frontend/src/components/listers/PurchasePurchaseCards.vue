@@ -109,7 +109,7 @@
             me.values = temp.data._embedded.purchases;
             
             me.newValue = {
-                'posttId': 0,
+                'postId': 0,
                 'userId': '',
                 'status': '',
                 'price': 0,

@@ -16,7 +16,7 @@
         </v-card-title >        
 
         <v-card-text>
-            <Number v-if="editMode" label="PosttId" v-model="value.posttId" :editMode="editMode" :inputUI="''"/>
+            <Number v-if="editMode" label="PostId" v-model="value.postId" :editMode="editMode" :inputUI="''"/>
             <String label="UserId" v-model="value.userId" :editMode="editMode" :inputUI="''"/>
             <String label="Status" v-model="value.status" :editMode="editMode" :inputUI="''"/>
             <Number label="Price" v-model="value.price" :editMode="editMode" :inputUI="''"/>
