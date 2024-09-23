@@ -60,13 +60,13 @@
 
                     <v-list-item
                         class="px-2"
-                        key="tradings"
-                        to="/tradings/tradings"
+                        key="trades"
+                        to="/trades/trades"
                         @click="changeUrl()"
                         color="primary"
                         style="font-weight:700;"
                     >
-                        Trading
+                        Trade
                     </v-list-item>
 
 
@@ -176,10 +176,10 @@ export default {
                 ImageUrl: '',
             },
             { 
-                title: 'Trading', 
+                title: 'Trade', 
                 description: '', 
-                key: 'tradings', 
-                route: '/tradings/tradings',
+                key: 'trades', 
+                route: '/trades/trades',
                 ImageUrl: '',
             },
             { 

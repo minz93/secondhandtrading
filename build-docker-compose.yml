@@ -51,7 +51,7 @@ services:
       - ./purchase:/usr/src
       - ./maven-repo:/root/.m2
       
-  trading:
+  trade:
     depends_on: 
       - kafka
     image: adoptopenjdk/maven-openjdk11:latest
@@ -62,7 +62,7 @@ services:
       - 8084:8084
     working_dir: /usr/src
     volumes:
-      - ./trading:/usr/src
+      - ./trade:/usr/src
       - ./maven-repo:/root/.m2
       
   alarm:

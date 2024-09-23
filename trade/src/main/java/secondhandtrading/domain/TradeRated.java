@@ -9,15 +9,17 @@ import secondhandtrading.infra.AbstractEvent;
 //<<< DDD / Domain Event
 @Data
 @ToString
-public class NegotiationCanceled extends AbstractEvent {
+public class TradeRated extends AbstractEvent {
 
-    private Long id;
+    private Long postId;
+    private Long userId;
+    private String rating;
 
-    public NegotiationCanceled(Trading aggregate) {
+    public TradeRated(Trade aggregate) {
         super(aggregate);
     }
 
-    public NegotiationCanceled() {
+    public TradeRated() {
         super();
     }
 }

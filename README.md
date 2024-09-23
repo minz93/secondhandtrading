@@ -22,7 +22,7 @@ See the README.md files inside the each microservices directory:
 
 - post
 - purchase
-- trading
+- trade
 - alarm
 - mypage
 
@@ -42,9 +42,9 @@ mvn spring-boot:run
 ```
  http :8088/purchases posttId="posttId" userId="userId" status="status" price="price" likeCnt="likeCnt" createDt="createDt" updateDt="updateDt" photos="photos" address="address" traderId="traderId" 
 ```
-- trading
+- trade
 ```
- http :8088/tradings postId="postId" userId="userId" chatId="chatId" status="status" updateDt="updateDt" 
+ http :8088/trades postId="postId" userId="userId" chatId="chatId" status="status" updateDt="updateDt" 
 ```
 - alarm
 ```

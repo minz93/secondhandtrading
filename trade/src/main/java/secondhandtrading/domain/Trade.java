@@ -5,17 +5,18 @@ import java.util.Date;
 import java.util.List;
 import javax.persistence.*;
 import lombok.Data;
-import secondhandtrading.TradingApplication;
+import secondhandtrading.TradeApplication;
+import secondhandtrading.domain.NegotiationCanceled;
 import secondhandtrading.domain.TradeCanceled;
 import secondhandtrading.domain.TradeEnded;
 import secondhandtrading.domain.TradeFixed;
 import secondhandtrading.domain.TradeRated;
 
 @Entity
-@Table(name = "Trading_table")
+@Table(name = "Trade_table")
 @Data
 //<<< DDD / Aggregate Root
-public class Trading {
+public class Trade {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -42,13 +43,16 @@ public class Trading {
 
         TradeRated tradeRated = new TradeRated(this);
         tradeRated.publishAfterCommit();
+
+        NegotiationCanceled negotiationCanceled = new NegotiationCanceled(this);
+        negotiationCanceled.publishAfterCommit();
     }
 
-    public static TradingRepository repository() {
-        TradingRepository tradingRepository = TradingApplication.applicationContext.getBean(
-            TradingRepository.class
+    public static TradeRepository repository() {
+        TradeRepository tradeRepository = TradeApplication.applicationContext.getBean(
+            TradeRepository.class
         );
-        return tradingRepository;
+        return tradeRepository;
     }
 
     public void fixTrade() {
@@ -77,21 +81,21 @@ public class Trading {
         //implement business logic here:
 
         /** Example 1:  new item 
-        Trading trading = new Trading();
-        repository().save(trading);
+        Trade trade = new Trade();
+        repository().save(trade);
 
-        TradeRated tradeRated = new TradeRated(trading);
+        TradeRated tradeRated = new TradeRated(trade);
         tradeRated.publishAfterCommit();
         */
 
         /** Example 2:  finding and process
         
-        repository().findById(tradeEnded.get???()).ifPresent(trading->{
+        repository().findById(tradeEnded.get???()).ifPresent(trade->{
             
-            trading // do something
-            repository().save(trading);
+            trade // do something
+            repository().save(trade);
 
-            TradeRated tradeRated = new TradeRated(trading);
+            TradeRated tradeRated = new TradeRated(trade);
             tradeRated.publishAfterCommit();
 
          });

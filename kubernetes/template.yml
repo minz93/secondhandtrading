@@ -83,22 +83,22 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: trading
+  name: trade
   labels:
-    app: trading
+    app: trade
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: trading
+      app: trade
   template:
     metadata:
       labels:
-        app: trading
+        app: trade
     spec:
       containers:
-        - name: trading
-          image: username/trading:latest
+        - name: trade
+          image: username/trade:latest
           ports:
             - containerPort: 8080
           readinessProbe:
@@ -239,15 +239,15 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: trading
+  name: trade
   labels:
-    app: trading
+    app: trade
 spec:
   ports:
     - port: 8080
       targetPort: 8080
   selector:
-    app: trading
+    app: trade
 
 
 ---
