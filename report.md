@@ -57,7 +57,12 @@
     1. 메시지가 수신될 때마다 알림이 발생해야한다.  Event driven
 
 
-# Event Storming 결과
+# MSA 아키텍처 구성도
+
+ㅇㅇㅇㅇ
+
+
+# Event Storming
 
 MSAEz 로 모델링한 이벤트스토밍 결과: https://www.msaez.io/#/181188513/storming/secondhandtrading
 
@@ -69,4 +74,4 @@ MSAEz 로 모델링한 이벤트스토밍 결과: https://www.msaez.io/#/1811885
 4. trade : 거래 관리 기능
 5. mypage : 판매 목록 조회 기능
 
-
+# 분산 트랜잭션 - Saga

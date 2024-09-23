@@ -12,7 +12,7 @@ import secondhandtrading.infra.AbstractEvent;
 public class TradeCanceled extends AbstractEvent {
 
     private Long postId;
-    private Long userId;
+    private String userId;
     private Long chatId;
     private String status;
     private Date updateDt;

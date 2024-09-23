@@ -23,7 +23,7 @@ public class Post {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long postId;
 
-    private Long userId;
+    private String userId;
 
     private String status;
 
