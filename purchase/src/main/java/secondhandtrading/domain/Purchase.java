@@ -34,7 +34,7 @@ public class Purchase {
     private Date updateDt;
 
     @ElementCollection
-    private List<Photos> photos;
+    private List<String> photos;
 
     private String address;
 

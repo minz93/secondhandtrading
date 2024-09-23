@@ -23,8 +23,7 @@
             <Number label="LikeCnt" v-model="value.likeCnt" :editMode="editMode" :inputUI="''"/>
             <Date label="CreateDt" v-model="value.createDt" :editMode="editMode" :inputUI="''"/>
             <Date label="UpdateDt" v-model="value.updateDt" :editMode="editMode" :inputUI="''"/>
-            <List&lt;Photos&gt; offline label="Photos" v-model="value.photos" :editMode="editMode" @change="change"/>
-            <PhotosManager offline label="Photos" v-model="value.photos" :editMode="editMode" @change="change"/>
+            <String label="Photos" v-model="value.photos" :editMode="editMode" :inputUI="''"/>
             <String label="Address" v-model="value.address" :editMode="editMode" :inputUI="''"/>
             <Number label="TraderId" v-model="value.traderId" :editMode="editMode" :inputUI="''"/>
         </v-card-text>

@@ -61,8 +61,12 @@
 
 MSAEz 로 모델링한 이벤트스토밍 결과: https://www.msaez.io/#/181188513/storming/secondhandtrading
 
-### 이벤트 도출
-![image](https://user-images.githubusercontent.com/487999/79683604-47bc0180-8266-11ea-9212-7e88c9bf9911.png)
+### 중고거래 이벤트 스토밍
+![image](https://github.com/minz93/secondhandtrading/blob/main/event-storming.png)
+1. post : 게시글 관리 기능
+2. purchase : 구매 관리 기능
+3. alarm : 알람 기능
+4. trade : 거래 관리 기능
+5. mypage : 판매 목록 조회 기능
 
-### 부적격 이벤트 탈락
-![image](https://user-images.githubusercontent.com/487999/79683612-4b4f8880-8266-11ea-9519-7e084524a462.png)
+

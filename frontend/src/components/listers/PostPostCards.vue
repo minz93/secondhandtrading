@@ -116,7 +116,7 @@
                 'price': 0,
                 'likeCnt': 0,
                 'address': '',
-                'photos': {},
+                'photos': [],
                 'updateDt': '2024-09-23',
             }
         },

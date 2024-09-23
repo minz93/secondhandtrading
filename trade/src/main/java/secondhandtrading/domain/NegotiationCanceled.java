@@ -11,7 +11,11 @@ import secondhandtrading.infra.AbstractEvent;
 @ToString
 public class NegotiationCanceled extends AbstractEvent {
 
-    private Long id;
+    private Long postId;
+    private Long userId;
+    private Long chatId;
+    private String status;
+    private Date updateDt;
 
     public NegotiationCanceled(Trade aggregate) {
         super(aggregate);
