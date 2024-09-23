@@ -14,7 +14,7 @@ public class MySalesList {
 
     @Id
     //@GeneratedValue(strategy=GenerationType.AUTO)
-    private Long userId;
+    private String userId;
 
     private Long postId;
     private String status;

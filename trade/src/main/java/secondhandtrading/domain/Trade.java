@@ -22,7 +22,7 @@ public class Trade {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long postId;
 
-    private Long userId;
+    private String userId;
 
     private Long chatId;
 

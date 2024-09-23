@@ -110,7 +110,7 @@
             
             me.newValue = {
                 'postId': 0,
-                'userId': '',
+                'userId': 0,
                 'status': '',
                 'createDt': '2024-09-23',
                 'price': 0,
