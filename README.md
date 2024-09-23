@@ -21,7 +21,7 @@ cd /bin
 See the README.md files inside the each microservices directory:
 
 - post
-- product
+- purchase
 - trading
 - alarm
 - mypage
@@ -38,9 +38,9 @@ mvn spring-boot:run
 ```
  http :8088/posts postId="postId" userId="userId" status="status" createDt="createDt" price="price" likeCnt="likeCnt" address="address" photos="photos" updateDt="updateDt" 
 ```
-- product
+- purchase
 ```
- http :8088/products posttId="posttId" userId="userId" status="status" price="price" likeCnt="likeCnt" createDt="createDt" updateDt="updateDt" photos="photos" address="address" traderId="traderId" 
+ http :8088/purchases posttId="posttId" userId="userId" status="status" price="price" likeCnt="likeCnt" createDt="createDt" updateDt="updateDt" photos="photos" address="address" traderId="traderId" 
 ```
 - trading
 ```

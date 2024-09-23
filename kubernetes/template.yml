@@ -43,22 +43,22 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: product
+  name: purchase
   labels:
-    app: product
+    app: purchase
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: product
+      app: purchase
   template:
     metadata:
       labels:
-        app: product
+        app: purchase
     spec:
       containers:
-        - name: product
-          image: username/product:latest
+        - name: purchase
+          image: username/purchase:latest
           ports:
             - containerPort: 8080
           readinessProbe:
@@ -222,15 +222,15 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: product
+  name: purchase
   labels:
-    app: product
+    app: purchase
 spec:
   ports:
     - port: 8080
       targetPort: 8080
   selector:
-    app: product
+    app: purchase
 
 
 ---
