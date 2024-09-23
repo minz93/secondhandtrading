@@ -55,6 +55,9 @@ public class Purchase {
         wishlistDeleted.publishAfterCommit();
     }
 
+    @PrePersist
+    public void onPrePersist() {}
+
     public static PurchaseRepository repository() {
         PurchaseRepository purchaseRepository = PurchaseApplication.applicationContext.getBean(
             PurchaseRepository.class

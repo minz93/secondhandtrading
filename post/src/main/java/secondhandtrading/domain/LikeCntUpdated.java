@@ -9,22 +9,16 @@ import secondhandtrading.infra.AbstractEvent;
 //<<< DDD / Domain Event
 @Data
 @ToString
-public class PostWrote extends AbstractEvent {
+public class LikeCntUpdated extends AbstractEvent {
 
     private Long postId;
-    private String userId;
-    private Date createDt;
-    private Integer price;
     private Integer likeCnt;
-    private String address;
-    private String photos;
-    private String status;
 
-    public PostWrote(Post aggregate) {
+    public LikeCntUpdated(Post aggregate) {
         super(aggregate);
     }
 
-    public PostWrote() {
+    public LikeCntUpdated() {
         super();
     }
 }

@@ -70,18 +70,6 @@
                     </v-list-item>
 
 
-                    <v-list-item
-                        class="px-2"
-                        key="alarms"
-                        to="/alarms/alarms"
-                        @click="changeUrl()"
-                        color="primary"
-                        style="font-weight:700;"
-                    >
-                        Alarm
-                    </v-list-item>
-
-
 
                 </v-list>
             </v-navigation-drawer>
@@ -180,13 +168,6 @@ export default {
                 description: '', 
                 key: 'trades', 
                 route: '/trades/trades',
-                ImageUrl: '',
-            },
-            { 
-                title: 'Alarm', 
-                description: '', 
-                key: 'alarms', 
-                route: '/alarms/alarms',
                 ImageUrl: '',
             },
             
