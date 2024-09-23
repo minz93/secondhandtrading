@@ -9,5 +9,5 @@ import secondhandtrading.infra.AbstractEvent;
 public class PostDeleted extends AbstractEvent {
 
     private Long postId;
-    private String userId;
+    private Long userId;
 }

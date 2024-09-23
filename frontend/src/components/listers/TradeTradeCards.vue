@@ -110,7 +110,7 @@
             
             me.newValue = {
                 'postId': 0,
-                'userId': 0,
+                'userId': '',
                 'chatId': 0,
                 'status': '',
                 'updateDt': '2024-09-23',

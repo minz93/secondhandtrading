@@ -9,7 +9,7 @@ import secondhandtrading.infra.AbstractEvent;
 public class PostEdited extends AbstractEvent {
 
     private Long postId;
-    private String userId;
+    private Long userId;
     private String status;
     private Date createDt;
     private Integer price;

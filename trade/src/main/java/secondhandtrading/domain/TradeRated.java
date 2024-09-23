@@ -12,7 +12,7 @@ import secondhandtrading.infra.AbstractEvent;
 public class TradeRated extends AbstractEvent {
 
     private Long postId;
-    private Long userId;
+    private String userId;
     private String rating;
 
     public TradeRated(Trade aggregate) {
