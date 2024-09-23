@@ -64,6 +64,9 @@ public class Post {
         statusUpdated.publishAfterCommit();
     }
 
+    @PreRemove
+    public void onPreRemove() {}
+
     public static PostRepository repository() {
         PostRepository postRepository = PostApplication.applicationContext.getBean(
             PostRepository.class
