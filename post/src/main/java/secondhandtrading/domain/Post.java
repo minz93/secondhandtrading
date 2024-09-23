@@ -40,6 +40,31 @@ public class Post {
 
     private Date updateDt;
 
+    public String getUserId() {
+        return userId;
+    }
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+    public Long getPostId() {
+        return postId;
+    }
+    public void setPostId(Long postId) {
+        this.postId = postId;
+    }
+    public String getStatus() {
+        return status;
+    }
+    public void setStatus(String status) {
+        this.status = status;
+    }
+    public int getLikeCnt() {
+        return likeCnt;
+    }
+    public void setLikeCnt(int likeCnt) {
+        this.likeCnt = likeCnt;
+    }
+
     @PostPersist
     public void onPostPersist() {
         PostWrote postWrote = new PostWrote(this);
@@ -75,7 +100,7 @@ public class Post {
         //implement business logic here:
 
         PostWrote postWrote = new PostWrote(this);
-        postWrote.setStatus = "Created";
+        postWrote.setStatus("Created");
         postWrote.publishAfterCommit();
     }
 
@@ -131,7 +156,7 @@ public class Post {
     //>>> Clean Arch / Port Method
     //<<< Clean Arch / Port Method
     public static void updateStatus(PostHided postHided) {
-        repository().findById(Long.valueOf(tradeHided.getPostId())).ifPresent(post->{
+        repository().findById(Long.valueOf(postHided.getPostId())).ifPresent(post->{
             post.setStatus("PostHided"); // do something
             repository().save(post);
         });
@@ -143,27 +168,33 @@ public class Post {
     public static void updateLikecnt(WishlistAdded wishlistAdded) {
 
         repository().findById(Long.valueOf(wishlistAdded.getPostId())).ifPresent(post->{
-            
-            post.setLikeCnt(post.getLikeCnt() + 1);
-            repository().save(post);
-
+            if(post.getUserId() == wishlistAdded.getUserId() & post.getLikeCnt() == 0) {
+                post.setLikeCnt(post.getLikeCnt() + 1);
+                repository().save(post);
+            } else {
+                post.setLikeCnt(post.getLikeCnt() - 1);
+                repository().save(post);
+            }
+        
             LikeCntUpdated likeCntUpdated = new LikeCntUpdated(post);
             likeCntUpdated.publishAfterCommit();
-
         });
     }
 
     //>>> Clean Arch / Port Method
     //<<< Clean Arch / Port Method
     public static void updateLikecnt(WishlistDeleted wishlistDeleted) {
-        repository().findById(Long.valueOf(wishlistAdded.getPostId())).ifPresent(post->{
-            if(post.getUserId() == wishlistAdded.getUserId() & post.getLikeCnt() > 1) {
+        repository().findById(Long.valueOf(WishlistDeleted.getPostId())).ifPresent(post->{
+            if(post.getUserId() == WishlistDeleted.getUserId() & post.getLikeCnt() >= 1) {
                 post.setLikeCnt(post.getLikeCnt() - 1);
                 repository().save(post);
-
-                LikeCntUpdated likeCntUpdated = new LikeCntUpdated(post);
-                likeCntUpdated.publishAfterCommit();
+            } else {
+                post.setLikeCnt(post.getLikeCnt() + 1);
+                repository().save(post);
             }
+
+            LikeCntUpdated likeCntUpdated = new LikeCntUpdated(post);
+            likeCntUpdated.publishAfterCommit();
 
         });
 
