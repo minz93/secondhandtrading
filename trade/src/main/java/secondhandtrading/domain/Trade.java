@@ -78,28 +78,12 @@ public class Trade {
 
     //<<< Clean Arch / Port Method
     public static void rateTrade(TradeEnded tradeEnded) {
-        //implement business logic here:
-
-        /** Example 1:  new item 
+        
         Trade trade = new Trade();
         repository().save(trade);
 
         TradeRated tradeRated = new TradeRated(trade);
-        tradeRated.publishAfterCommit();
-        */
-
-        /** Example 2:  finding and process
-        
-        repository().findById(tradeEnded.get???()).ifPresent(trade->{
-            
-            trade // do something
-            repository().save(trade);
-
-            TradeRated tradeRated = new TradeRated(trade);
-            tradeRated.publishAfterCommit();
-
-         });
-        */
+        TradeRated.publishAfterCommit();
 
     }
     //>>> Clean Arch / Port Method

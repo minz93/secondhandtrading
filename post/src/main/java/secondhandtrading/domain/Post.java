@@ -97,84 +97,29 @@ public class Post {
 
     //<<< Clean Arch / Port Method
     public static void updateStatus(TradeEnded tradeEnded) {
-        //implement business logic here:
-
-        /** Example 1:  new item 
-        Post post = new Post();
-        repository().save(post);
-
-        StatusUpdated statusUpdated = new StatusUpdated(post);
-        statusUpdated.publishAfterCommit();
-        */
-
-        /** Example 2:  finding and process
-        
-        repository().findById(tradeEnded.get???()).ifPresent(post->{
-            
-            post // do something
-            repository().save(post);
-
-            StatusUpdated statusUpdated = new StatusUpdated(post);
-            statusUpdated.publishAfterCommit();
-
+        repository().findById(Long.valueOf(tradeEnded.getPostId())).ifPresent(trade->{
+            trade.setStatus("TradeEnded"); // do something
+            repository().save(trade);
          });
-        */
-
     }
 
     //>>> Clean Arch / Port Method
     //<<< Clean Arch / Port Method
     public static void updateStatus(TradeFixed tradeFixed) {
-        //implement business logic here:
-
-        /** Example 1:  new item 
-        Post post = new Post();
-        repository().save(post);
-
-        StatusUpdated statusUpdated = new StatusUpdated(post);
-        statusUpdated.publishAfterCommit();
-        */
-
-        /** Example 2:  finding and process
-        
-        repository().findById(tradeFixed.get???()).ifPresent(post->{
-            
-            post // do something
-            repository().save(post);
-
-            StatusUpdated statusUpdated = new StatusUpdated(post);
-            statusUpdated.publishAfterCommit();
-
+       repository().findById(Long.valueOf(tradeFixed.getPostId())).ifPresent(trade->{
+            trade.setStatus("TradeReserved"); // do something
+            repository().save(trade);
          });
-        */
 
     }
 
     //>>> Clean Arch / Port Method
     //<<< Clean Arch / Port Method
     public static void updateStatus(TradeCanceled tradeCanceled) {
-        //implement business logic here:
-
-        /** Example 1:  new item 
-        Post post = new Post();
-        repository().save(post);
-
-        StatusUpdated statusUpdated = new StatusUpdated(post);
-        statusUpdated.publishAfterCommit();
-        */
-
-        /** Example 2:  finding and process
-        
-        repository().findById(tradeCanceled.get???()).ifPresent(post->{
-            
-            post // do something
-            repository().save(post);
-
-            StatusUpdated statusUpdated = new StatusUpdated(post);
-            statusUpdated.publishAfterCommit();
-
+        repository().findById(Long.valueOf(tradeCanceled.getPostId())).ifPresent(trade->{
+            trade.setStatus("TradeCanceled"); // do something
+            repository().save(trade);
          });
-        */
 
     }
     //>>> Clean Arch / Port Method
