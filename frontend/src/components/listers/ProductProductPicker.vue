@@ -41,6 +41,9 @@
                             <v-list-item-subtitle>
                                 Address :  {{item.address }}
                             </v-list-item-subtitle>
+                            <v-list-item-subtitle>
+                                TraderId :  {{item.traderId }}
+                            </v-list-item-subtitle>
                         </v-list-item-content>
 
                         <v-list-item-action>
@@ -92,6 +95,8 @@
                 if(val != undefined) {
                     var arr = this.list[val]._links.self.href.split('/');
                     obj['posttId'] = arr[4]; 
+                    
+                    
                     
                     
                     

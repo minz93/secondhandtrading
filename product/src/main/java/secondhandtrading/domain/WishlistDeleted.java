@@ -16,6 +16,7 @@ public class WishlistDeleted extends AbstractEvent {
     private String status;
     private Integer price;
     private Integer likeCnt;
+    private Long traderId;
 
     public WishlistDeleted(Product aggregate) {
         super(aggregate);

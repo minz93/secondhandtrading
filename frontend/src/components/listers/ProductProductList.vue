@@ -49,6 +49,7 @@
                             
                             
                             
+                            
                         </v-list-item-title>
 
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
@@ -61,6 +62,7 @@
                             [ UpdateDt :  {{data.updateDt }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Photos :  {{data.photos }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Address :  {{data.address }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ TraderId :  {{data.traderId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
 
                     </v-list-item-content>
@@ -137,6 +139,7 @@
                 'updateDt': '2024-09-23',
                 'photos': [],
                 'address': '',
+                'traderId': 0,
             }
         },
         methods: {

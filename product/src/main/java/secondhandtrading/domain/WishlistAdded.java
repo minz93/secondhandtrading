@@ -16,6 +16,7 @@ public class WishlistAdded extends AbstractEvent {
     private String status;
     private Integer price;
     private Integer likeCnt;
+    private Long traderId;
 
     public WishlistAdded(Product aggregate) {
         super(aggregate);

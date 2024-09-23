@@ -38,6 +38,8 @@ public class Product {
 
     private String address;
 
+    private Long traderId;
+
     @PostPersist
     public void onPostPersist() {
         MessagesSent messagesSent = new MessagesSent(this);
@@ -86,6 +88,13 @@ public class Product {
 
         WishlistDeleted wishlistDeleted = new WishlistDeleted(this);
         wishlistDeleted.publishAfterCommit();
+    }
+
+    public void sendAcceptMessages() {
+        //implement business logic here:
+
+        MessagesSent messagesSent = new MessagesSent(this);
+        messagesSent.publishAfterCommit();
     }
 }
 //>>> DDD / Aggregate Root
