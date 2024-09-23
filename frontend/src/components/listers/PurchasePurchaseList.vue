@@ -53,7 +53,7 @@
                         </v-list-item-title>
 
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
-                            [ PosttId :  {{data.posttId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ PostId :  {{data.postId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ UserId :  {{data.userId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Status :  {{data.status }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Price :  {{data.price }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -130,7 +130,7 @@
             this.values = temp.data._embedded.purchases;
             
             this.newValue = {
-                'posttId': 0,
+                'postId': 0,
                 'userId': '',
                 'status': '',
                 'price': 0,

@@ -19,7 +19,7 @@ public class Purchase {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long posttId;
+    private Long postId;
 
     private String userId;
 

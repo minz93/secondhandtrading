@@ -9,7 +9,7 @@ import secondhandtrading.infra.AbstractEvent;
 @ToString
 public class WishlistDeleted extends AbstractEvent {
 
-    private Long posttId;
+    private Long postId;
     private String userId;
     private String status;
     private Integer price;

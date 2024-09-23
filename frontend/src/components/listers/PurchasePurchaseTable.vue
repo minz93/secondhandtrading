@@ -66,7 +66,7 @@
             values: [],
             headers: 
                 [
-                    { text: "posttId", value: "posttId" },
+                    { text: "postId", value: "postId" },
                     { text: "userId", value: "userId" },
                     { text: "status", value: "status" },
                     { text: "price", value: "price" },
@@ -93,7 +93,7 @@
             this.values = temp.data._embedded.purchases;
 
             this.newValue = {
-                'posttId': 0,
+                'postId': 0,
                 'userId': '',
                 'status': '',
                 'price': 0,

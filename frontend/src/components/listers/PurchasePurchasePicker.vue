@@ -15,7 +15,7 @@
                             <v-list-item-title>
                             </v-list-item-title>
                             <v-list-item-subtitle>
-                                PosttId :  {{item.posttId }}
+                                PostId :  {{item.postId }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
                                 UserId :  {{item.userId }}
@@ -94,7 +94,7 @@
                 var obj = {}
                 if(val != undefined) {
                     var arr = this.list[val]._links.self.href.split('/');
-                    obj['posttId'] = arr[4]; 
+                    obj['postId'] = arr[4]; 
                     
                     
                     
