@@ -40,30 +40,30 @@ public class Post {
 
     private Date updateDt;
 
-    public String getUserId() {
-        return userId;
-    }
-    public void setUserId(String userId) {
-        this.userId = userId;
-    }
-    public Long getPostId() {
-        return postId;
-    }
-    public void setPostId(Long postId) {
-        this.postId = postId;
-    }
-    public String getStatus() {
-        return status;
-    }
-    public void setStatus(String status) {
-        this.status = status;
-    }
-    public int getLikeCnt() {
-        return likeCnt;
-    }
-    public void setLikeCnt(int likeCnt) {
-        this.likeCnt = likeCnt;
-    }
+    // public String getUserId() {
+    //     return userId;
+    // }
+    // public void setUserId(String userId) {
+    //     this.userId = userId;
+    // }
+    // public Long getPostId() {
+    //     return postId;
+    // }
+    // public void setPostId(Long postId) {
+    //     this.postId = postId;
+    // }
+    // public String getStatus() {
+    //     return status;
+    // }
+    // public void setStatus(String status) {
+    //     this.status = status;
+    // }
+    // public int getLikeCnt() {
+    //     return likeCnt;
+    // }
+    // public void setLikeCnt(int likeCnt) {
+    //     this.likeCnt = likeCnt;
+    // }
 
     @PostPersist
     public void onPostPersist() {
@@ -184,8 +184,8 @@ public class Post {
     //>>> Clean Arch / Port Method
     //<<< Clean Arch / Port Method
     public static void updateLikecnt(WishlistDeleted wishlistDeleted) {
-        repository().findById(Long.valueOf(WishlistDeleted.getPostId())).ifPresent(post->{
-            if(post.getUserId() == WishlistDeleted.getUserId() & post.getLikeCnt() >= 1) {
+        repository().findById(Long.valueOf(wishlistDeleted.getPostId())).ifPresent(post->{
+            if(post.getUserId() == wishlistDeleted.getUserId() & post.getLikeCnt() >= 1) {
                 post.setLikeCnt(post.getLikeCnt() - 1);
                 repository().save(post);
             } else {
