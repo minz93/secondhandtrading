@@ -6,6 +6,7 @@ import java.util.List;
 import javax.persistence.*;
 import lombok.Data;
 import secondhandtrading.TradingApplication;
+import secondhandtrading.domain.PriceNegotiationCanceled;
 import secondhandtrading.domain.TradeCanceled;
 import secondhandtrading.domain.TradeEnded;
 import secondhandtrading.domain.TradeFixed;
@@ -42,6 +43,11 @@ public class Trading {
 
         TradeRated tradeRated = new TradeRated(this);
         tradeRated.publishAfterCommit();
+
+        PriceNegotiationCanceled priceNegotiationCanceled = new PriceNegotiationCanceled(
+            this
+        );
+        priceNegotiationCanceled.publishAfterCommit();
     }
 
     public static TradingRepository repository() {
