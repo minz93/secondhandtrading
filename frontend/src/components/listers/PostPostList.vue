@@ -129,7 +129,7 @@
             
             this.newValue = {
                 'postId': 0,
-                'userId': 0,
+                'userId': '',
                 'status': '',
                 'createDt': '2024-09-23',
                 'price': 0,
