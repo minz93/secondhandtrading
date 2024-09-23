@@ -75,6 +75,7 @@ public class Post {
         //implement business logic here:
 
         PostWrote postWrote = new PostWrote(this);
+        postWrote.setStatus = "Created";
         postWrote.publishAfterCommit();
     }
 
@@ -101,113 +102,70 @@ public class Post {
 
     //<<< Clean Arch / Port Method
     public static void updateStatus(TradeEnded tradeEnded) {
-        repository().findById(Long.valueOf(tradeEnded.getPostId())).ifPresent(trade->{
-            trade.setStatus("TradeEnded"); // do something
-            repository().save(trade);
-         });
+        repository().findById(Long.valueOf(tradeEnded.getPostId())).ifPresent(post->{
+            post.setStatus("TradeEnded"); // do something
+            repository().save(post);
+        });
     }
 
     //>>> Clean Arch / Port Method
     //<<< Clean Arch / Port Method
     public static void updateStatus(TradeFixed tradeFixed) {
-       repository().findById(Long.valueOf(tradeFixed.getPostId())).ifPresent(trade->{
-            trade.setStatus("TradeReserved"); // do something
-            repository().save(trade);
-         });
+       repository().findById(Long.valueOf(tradeFixed.getPostId())).ifPresent(post->{
+            post.setStatus("TradeReserved"); // do something
+            repository().save(post);
+        });
 
     }
 
     //>>> Clean Arch / Port Method
     //<<< Clean Arch / Port Method
     public static void updateStatus(TradeCanceled tradeCanceled) {
-        repository().findById(Long.valueOf(tradeCanceled.getPostId())).ifPresent(trade->{
-            trade.setStatus("TradeCanceled"); // do something
-            repository().save(trade);
-         });
+        repository().findById(Long.valueOf(tradeCanceled.getPostId())).ifPresent(post->{
+            post.setStatus("Created"); // do something
+            repository().save(post);
+        });
 
     }
 
     //>>> Clean Arch / Port Method
     //<<< Clean Arch / Port Method
     public static void updateStatus(PostHided postHided) {
-        //implement business logic here:
-
-        /** Example 1:  new item 
-        Post post = new Post();
-        repository().save(post);
-
-        StatusUpdated statusUpdated = new StatusUpdated(post);
-        statusUpdated.publishAfterCommit();
-        */
-
-        /** Example 2:  finding and process
-        
-        repository().findById(postHided.get???()).ifPresent(post->{
-            
-            post // do something
+        repository().findById(Long.valueOf(tradeHided.getPostId())).ifPresent(post->{
+            post.setStatus("PostHided"); // do something
             repository().save(post);
-
-            StatusUpdated statusUpdated = new StatusUpdated(post);
-            statusUpdated.publishAfterCommit();
-
-         });
-        */
+        });
 
     }
 
     //>>> Clean Arch / Port Method
     //<<< Clean Arch / Port Method
     public static void updateLikecnt(WishlistAdded wishlistAdded) {
-        //implement business logic here:
 
-        /** Example 1:  new item 
-        Post post = new Post();
-        repository().save(post);
-
-        LikeCntUpdated likeCntUpdated = new LikeCntUpdated(post);
-        likeCntUpdated.publishAfterCommit();
-        */
-
-        /** Example 2:  finding and process
-        
-        repository().findById(wishlistAdded.get???()).ifPresent(post->{
+        repository().findById(Long.valueOf(wishlistAdded.getPostId())).ifPresent(post->{
             
-            post // do something
+            post.setLikeCnt(post.getLikeCnt() + 1);
             repository().save(post);
 
             LikeCntUpdated likeCntUpdated = new LikeCntUpdated(post);
             likeCntUpdated.publishAfterCommit();
 
-         });
-        */
-
+        });
     }
 
     //>>> Clean Arch / Port Method
     //<<< Clean Arch / Port Method
     public static void updateLikecnt(WishlistDeleted wishlistDeleted) {
-        //implement business logic here:
+        repository().findById(Long.valueOf(wishlistAdded.getPostId())).ifPresent(post->{
+            if(post.getUserId() == wishlistAdded.getUserId() & post.getLikeCnt() > 1) {
+                post.setLikeCnt(post.getLikeCnt() - 1);
+                repository().save(post);
 
-        /** Example 1:  new item 
-        Post post = new Post();
-        repository().save(post);
+                LikeCntUpdated likeCntUpdated = new LikeCntUpdated(post);
+                likeCntUpdated.publishAfterCommit();
+            }
 
-        LikeCntUpdated likeCntUpdated = new LikeCntUpdated(post);
-        likeCntUpdated.publishAfterCommit();
-        */
-
-        /** Example 2:  finding and process
-        
-        repository().findById(wishlistDeleted.get???()).ifPresent(post->{
-            
-            post // do something
-            repository().save(post);
-
-            LikeCntUpdated likeCntUpdated = new LikeCntUpdated(post);
-            likeCntUpdated.publishAfterCommit();
-
-         });
-        */
+        });
 
     }
     //>>> Clean Arch / Port Method
