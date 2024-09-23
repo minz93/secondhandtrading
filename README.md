@@ -48,7 +48,7 @@ mvn spring-boot:run
 ```
 - alarm
 ```
- http :8088/alarms alarmId="alarmId" userId="userId" sellerUserId="sellerUserId" postId="postId" 
+ http :8088/alarms alarmId="alarmId" userId="userId" traderId="traderId" postId="postId" 
 ```
 - mypage
 ```

@@ -18,7 +18,7 @@
         <v-card-text>
             <Number v-if="editMode" label="AlarmId" v-model="value.alarmId" :editMode="editMode" :inputUI="''"/>
             <Number label="UserId" v-model="value.userId" :editMode="editMode" :inputUI="''"/>
-            <Number label="SellerUserId" v-model="value.sellerUserId" :editMode="editMode" :inputUI="''"/>
+            <Number label="TraderId" v-model="value.traderId" :editMode="editMode" :inputUI="''"/>
             <Number label="PostId" v-model="value.postId" :editMode="editMode" :inputUI="''"/>
         </v-card-text>
 

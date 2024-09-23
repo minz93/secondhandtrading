@@ -68,7 +68,7 @@
                 [
                     { text: "alarmId", value: "alarmId" },
                     { text: "userId", value: "userId" },
-                    { text: "sellerUserId", value: "sellerUserId" },
+                    { text: "traderId", value: "traderId" },
                     { text: "postId", value: "postId" },
                 ],
             alarm : [],
@@ -89,7 +89,7 @@
             this.newValue = {
                 'alarmId': 0,
                 'userId': 0,
-                'sellerUserId': 0,
+                'traderId': 0,
                 'postId': 0,
             }
         },

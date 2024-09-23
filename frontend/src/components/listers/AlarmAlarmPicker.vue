@@ -21,7 +21,7 @@
                                 UserId :  {{item.userId }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                SellerUserId :  {{item.sellerUserId }}
+                                TraderId :  {{item.traderId }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
                                 PostId :  {{item.postId }}

@@ -49,7 +49,7 @@
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
                             [ AlarmId :  {{data.alarmId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ UserId :  {{data.userId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ SellerUserId :  {{data.sellerUserId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ TraderId :  {{data.traderId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ PostId :  {{data.postId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
 
@@ -120,7 +120,7 @@
             this.newValue = {
                 'alarmId': 0,
                 'userId': 0,
-                'sellerUserId': 0,
+                'traderId': 0,
                 'postId': 0,
             }
         },

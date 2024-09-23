@@ -111,7 +111,7 @@
             me.newValue = {
                 'alarmId': 0,
                 'userId': 0,
-                'sellerUserId': 0,
+                'traderId': 0,
                 'postId': 0,
             }
         },

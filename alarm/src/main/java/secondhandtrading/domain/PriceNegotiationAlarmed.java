@@ -13,7 +13,7 @@ public class PriceNegotiationAlarmed extends AbstractEvent {
 
     private Long alarmId;
     private Long userId;
-    private Long sellerUserId;
+    private Long traderId;
     private Long postId;
     private Integer negoPrice;
 
